@@ -3,55 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои контакты</title>
+    <title>My Links</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, system-ui, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            background-color: #121212;
+            background-color: #0d1117; /* Темный фон в стиле GitHub/Steam */
             color: white;
         }
         .container {
             text-align: center;
             width: 90%;
-            max-width: 300px;
+            max-width: 350px;
         }
-        h1 { font-size: 1.5rem; margin-bottom: 20px; }
-        .link-card {
+        .gif-card {
             display: block;
-            padding: 15px;
-            margin: 10px 0;
-            background: #1e1e1e;
-            color: #00ff88;
+            margin-bottom: 25px;
             text-decoration: none;
-            border-radius: 12px;
-            border: 1px solid #333;
-            transition: 0.3s;
-            font-weight: bold;
+            transition: transform 0.2s ease;
+            position: relative;
         }
-        .link-card:active {
+        .gif-card:active {
             transform: scale(0.95);
-            background: #252525;
         }
-        .steam { color: #66c0f4; border-color: #1b2838; }
-        .personal { color: #ff007a; border-color: #3d001d; }
+        .gif-card img {
+            width: 100%;
+            border-radius: 20px;
+            border: 2px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .label {
+            margin-top: 8px;
+            display: block;
+            font-size: 0.9rem;
+            color: #8b949e;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Связь со мной</h1>
-    
-    <a href="https://steamcommunity.com/profiles/76561199100871923" class="link-card steam">
-        🎮 Профиль Steam
+    <a href="https://steamcommunity.com/profiles/76561199100871923" class="gif-card">
+        <img src="sitegoodviewsteemlink.gif" alt="Steam Profile">
+        <span class="label">Steam Profile</span>
     </a>
-    
-    <a href="https://jic-jevgin.github.io/jic-3d-print/" class="link-card personal">
-        🌐 Мой личный сайт
+
+    <a href="https://jic-jevgin.github.io/Hello-its-me/" class="gif-card">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXF6Znd6NXF4Znd6NXF4Znd6NXF4Znd6NXF4Znd6NXF4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKMGpxU8N9G1u7u/giphy.gif" alt="My Website">
+        <span class="label">Personal Site</span>
     </a>
 </div>
 
